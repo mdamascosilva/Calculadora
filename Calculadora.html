@@ -1,4 +1,4 @@
-<html>
+﻿<html>
     <head>
         <meta charset="utf-8" />
 <title>Calculadora</title>
@@ -7,7 +7,12 @@
 <h1> Calculadora</h1>
 <p>Insira o primeiro número: <input type="number" id="a" /></p>
 <p>Insira o segundo número: <input type="number" id="b" /></p>
+
 <button onclick="somar()">Somar (+)</button>
+<button onclick="diminuir()">Diminuir (-)</button>
+<button onclick="multiplicar()">Multiplicar (*)</button>
+<button onclick="dividir()">Dividir (/)</button>
+
 <p>Resultado: <input type="number" id="resultado" readonly/></p>
 
 <script>
@@ -17,6 +22,30 @@ function somar() {
     var resultado = document.getElementById('resultado');
     resultado.value = a + b;
     console.log('Somando elementos: ' + a + ' + ' + b + ' = ' + resultado.value);
+}
+
+function diminuir() {
+    var a = Number (document.getElementById('a').value);
+    var b = Number (document.getElementById('b').value);
+    var resultado = document.getElementById('resultado');
+    resultado.value = a - b;
+    console.log('Diminuindo elementos: ' + a + ' - ' + b + ' = ' + resultado.value);
+}
+
+function multiplicar() {
+    var a = Number (document.getElementById('a').value);
+    var b = Number (document.getElementById('b').value);
+    var resultado = document.getElementById('resultado');
+    resultado.value = a * b;
+    console.log('Multiplicando elementos: ' + a + ' * ' + b + ' = ' + resultado.value);
+}
+
+function dividir() {
+    var a = Number (document.getElementById('a').value);
+    var b = Number (document.getElementById('b').value);
+    var resultado = document.getElementById('resultado');
+    resultado.value = a / b;
+    console.log('Dividindo elementos: ' + a + ' / ' + b + ' = ' + resultado.value);
 }
 </script>
 
